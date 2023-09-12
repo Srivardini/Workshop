@@ -13,7 +13,7 @@ def clip_to_radius():
 def generate_sky_pos():
         
     # from wikipedia
-    RA = '00:42:44.3'
+    RA = '00:11:44.3'
     DEC = '41:16:09'
 
     d, m, s = DEC.split(':')
