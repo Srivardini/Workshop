@@ -26,7 +26,6 @@ def generate_sky_pos():
     NSRC = 1_000_000
 
     # make 1000 stars within 1 degree of Andromeda
-
     ras = []
     decs = []
     for i in range(NSRC):
