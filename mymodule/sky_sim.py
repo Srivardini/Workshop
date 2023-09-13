@@ -32,7 +32,7 @@ def skysim_parser():
                         help="Central dec (degrees) for the simulation location")
     parser.add_argument('--out', dest='out', type=str, default='catalog.csv',
                         help='destination for the output catalog')
-    parser.add_argument('--logging', type=str, default=logging.INFO,
+    parser.add_argument('--logging', type=str, default='INFO',
                         help='Logginf levels from (DEBUG,INFO,WARNING,ERROR,CRITICAL)')
     return parser
 
