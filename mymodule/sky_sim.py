@@ -10,11 +10,6 @@ from math import cos, sin, pi
 
 import mymodule
 
-logging.basicConfig(format="%(name)s:%(levelname)s %(message)s", level=logging.INFO)
-log = logging.getLogger("<my module>")
-
-
-
 NSRC = 1_000
 RA = '00:42:44.3'
 DEC = '41:16:09'
@@ -30,6 +25,7 @@ def skysim_parser():
     """
     parser = argparse.ArgumentParser(prog='sky_sim', prefix_chars='-', description="Simulate a sky")
     parser.add_argument('--version', action='version', version=f'%(prog)s {mymodule.__version__}')
+    
     parser.add_argument('--ra', dest = 'ra', type=float, default=None,
                         help="Central ra (degrees) for the simulation location")
     parser.add_argument('--dec', dest = 'dec', type=float, default=None,
