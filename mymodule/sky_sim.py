@@ -82,6 +82,7 @@ def clip_to_radius(ra, dec, ras, decs):
     output_ras = []
     output_decs = []
     for ra_i, dec_i in zip(ras, decs):
+        log.debug(f"Checking {ra_i} {dec_i} ")
         if (ra_i - ra)**2 + (dec_i - dec)**2 < 1:
             output_ras.append(ra_i)
             output_decs.append(dec_i)
@@ -98,7 +99,7 @@ def main():
         'ERROR': logging.ERROR,
         'CRITICAL': logging.CRITICAL
     }
-    
+
     log.debug('This is a debug message')
     log.info('This is an info message')
     log.warning('This is a warning message')
@@ -116,8 +117,8 @@ def main():
     ras, decs = clip_to_radius(ra_deg, dec_deg, ras, decs)
 
     # now write these to a csv file for use by my other program
-    with open(options.out,'w') as f:
-        print("id,ra,dec", file=f)
-        for i in range(len(ras)):
-            print(f"{i:07d}, {ras[i]:12f}, {decs[i]:12f}", file=f)
-    print(f"Wrote {options.out}")
+    #with open(options.out,'w') as f:
+     #   print("id,ra,dec", file=f)
+      #  for i in range(len(ras)):
+       #     print(f"{i:07d}, {ras[i]:12f}, {decs[i]:12f}", file=f)
+    #print(f"Wrote {options.out}")
